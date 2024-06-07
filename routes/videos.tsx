@@ -1,10 +1,15 @@
-import { State, Video } from "../types.ts";
+import { Video } from "../types.ts";
 import { FreshContext, Handlers, PageProps} from "$fresh/server.ts";
 import VideoList from "../components/VideoList.tsx";
 
 type Data = {
     videos:Video[],
     userId: string
+}
+type State = {
+    id:string;
+    name: string;
+    email: string
 }
 
 export const handler:Handlers<Data, State> = {
