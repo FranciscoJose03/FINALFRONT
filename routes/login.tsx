@@ -9,6 +9,7 @@ export const config: RouteConfig = {
 }
 
 export type Data = {message: string}
+
 export const handler: Handlers = {
     POST: async(req: Request, ctx: FreshContext<unknown, Data>) => {
         const url = new URL (req.url);
